@@ -161,5 +161,5 @@ void main(){
 /* 
 ==> OPERADOR TERNÁRIO (? :). Note que na linha do status atual, usou-se ${estaOnline ? "OPERACIONAL (ONLINE)" : "OFFLINE"}
 dentro das chaves. Isso é uma estrutura de decisão compacta de uma linha. Ela lê: Se estaOnline for verdadeiro, exiba a primeira frase;
-caso contrário, exiba a segunda
+caso contrário, exiba a segunda. */
 }
