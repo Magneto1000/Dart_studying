@@ -126,9 +126,32 @@ void main() {
 	print(produto['preco']); //Imprime: 259.9
 
 }
+*/
+/*
 ========================================================================
 
+3. ESTRUTURAS DE REPETIÇÃO: Loops
+========================================================================
+Loops (laços de repetição) executam um bloco de código repetidas vezes enquanto uma
+condição específica for verdadeira; Eles evitam a repetição desnecessária de linhas de código
+(Princípio DRY - Don't Repeat Yourself).
 
+ ==> O Loop for Tradicional (Contador TRadicional)
+ É controlado por trÊs etapas explícitas: 
+ 1) A inicialização de uma variável controladora;
+ 2) A condição de parada;
+ 3) O incremento desta variável a cada ciclo,
+ 
+ Esta estrutura é perfeita quando precisamos saber exatamente o índice númerico da interação atual.
+ =======================================================================
+ EXEMPLOS...
+ A)
+ */
+ void main() {
+	for (int i = 0; i < 3; i++) {
+		print('Contagem atual: $i'); // Imprime  de 0 a 2.
+	}
+ }
 
 
 
