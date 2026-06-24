@@ -40,7 +40,7 @@ void main(){
 */
 //========================================================================
 //b)
-
+/*
 import 'dart:io'; // importando a biblioteca para solicitar dados ao usuário
 
 void main() {
@@ -70,29 +70,63 @@ void main() {
 		print('Aluno não encontrado!');
 	}
 }
-
-//========================================================================
+*/
+/*
+========================================================================
 //2. CONTROLE ESTRUTURADO: switch
 
+void main() {
+	String comando = 'PENDENTE';
+	
+	switch (comando) {
+		case 'PENDENTE':
+			print('Aguardando o processamento...');
+			break; // A palavra 'break' identifique a execução para não testar os casos abaixo
+		case 'CONCLUÍDO':
+			print('Tarefa finalizada com sucesso.');
+			break;
+		default:
+			print('Comando inválido ou desconhecido.'); // Equivalente ao 'else'
+	}	
+}
 
- 
+========================================================================
 
+2. Coleções Estruturadas: List e Map
 
+Na engenharia de dados, coleções são estruturas que organizam múltiplos elementos sob uma 
+única referÊncia na memória RAM.
 
+* List (Coleções Indexadas)
+Essencialmente, a lista armazena elementos de forma sequencial onde a posição
+de cada um é demarcada por um índice numérico qie inicia estritamente no 0.
 
+* Map (Dicionários de Chave e Valor)
+O Map é uma das estruturas  mais poderosas e cruciais da computação moderna. Em vez de acessar
+um dado por um índice númerico invisível(0,1,2), vocÊ define uma Chave(Key) textual
+personalizada para acessar um Valor(Value). É o formato exato utilizado para trafegar dados 
+na internet (o famoso padrão JSON).
 
+Sua sistaxe usa chaves {} e os pares são separados por dois pontos ( : ).
+========================================================================
+EXEMPLO 
+========================================================================
+A) DART
 
+void main() {
+	// Declara-se um Map onde as chaves são Strings e os valores podem dinâmincos (qualquer tipo)
+	Map<String, dynamic> produto = {
+	'nome': 'Teclado Mecânico',
+	'preco': 259.90,
+	'emEstoque': true
+	};
+	
+	//Para acesaar o valor, basta chamar o nome Map seguido da chave entre colchetes 
+	print(produto['nome']); //Imprime: Teclado Mecânico
+	print(produto['preco']); //Imprime: 259.9
 
-
-
-
-
-
-
-
-
-
-
+}
+========================================================================
 
 
 
