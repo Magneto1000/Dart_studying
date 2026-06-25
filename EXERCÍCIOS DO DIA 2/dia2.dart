@@ -135,26 +135,51 @@ void main() {
 Loops (laços de repetição) executam um bloco de código repetidas vezes enquanto uma
 condição específica for verdadeira; Eles evitam a repetição desnecessária de linhas de código
 (Princípio DRY - Don't Repeat Yourself).
-
+----------------------------------------------------------
  ==> O Loop for Tradicional (Contador TRadicional)
  É controlado por trÊs etapas explícitas: 
  1) A inicialização de uma variável controladora;
  2) A condição de parada;
  3) O incremento desta variável a cada ciclo,
- 
  Esta estrutura é perfeita quando precisamos saber exatamente o índice númerico da interação atual.
  =======================================================================
  EXEMPLOS...
  A)
- */
+ 
  void main() {
 	for (int i = 0; i < 3; i++) {
 		print('Contagem atual: $i'); // Imprime  de 0 a 2.
 	}
  }
+================================================================== 
+B)
+void main() {
+ for(int i = 0; i < 10; i++) {
+  print('Contagem atual é: $i'); // imprime de 0 a 10
+ }
+}
+==================================================================
+C)
+void main() {
+  for(int i = 4; i < 7; i++) { // Começa no 4 e vai até 6
+    print('A contagem atual é: $i');
+  }
+}
+==================================================================
 
-
-
+==> O Loop for-in (Iteração direta sobre coleções)
+Se você tem uma lista e só quer ler os elementso dela de cima a baixo, sem se importar 
+os números dos índices, o for-in limpa a sintaxe. Ele extraí cada item da lista automaticamente
+a cada cilco.
+==================================================================
+Exemplos...
+A)*/
+void main(){
+  List<String> linguagens = ['Dart', 'Python', 'C'];
+  for (var linguagem in linguagens) {  
+    print('Tecnologia ativa: $linguagens');
+  } 
+}
 
 
 
