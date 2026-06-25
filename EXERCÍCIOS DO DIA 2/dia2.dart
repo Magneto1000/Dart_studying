@@ -230,9 +230,9 @@ void main() {
 }
 ========================================================================
 DESAFIO FINAL DO DIA 2
-
+A) 
 Neste exercício, vamos usar o lopp for tradicional para varrer uma lista e usar a variável
-contadora i para formatar a numeração de exibição na tela.*/
+contadora i para formatar a numeração de exibição na tela.
 
 void main() {
 	List<String> funcionalidades = [
@@ -253,10 +253,73 @@ void main() {
 	}
 	print('---------------------------------------');
 }
+========================================================================
+B)
 
 
+void main() {
+	List<String> menu = [
+	'Criar perfil',
+	'Alterar credenciais',
+	'Salvar',
+	'SAir',	
+	];
+	
+	print('----- MENU PERFIL -----');
+	print('            ');
+	for (int i = 0; i < menu.length; i++) {
+		print('${i + 1} . ${menu[i]}');
+		print('--------------------');
+	}
+	
+}
+========================================================================
+C)
 
+void main(){
+	List<String> cidades = [
+	'Santos',
+	'Guarulhos',
+	'Salvador',
+	'Natal'
+	];
 
+	print('CIdades Brasileiras!');
+	print('    ');
+	print('    ');
+	for (int i = 1; i < cidades.length; i ++) {
+		print('${i + 1} . ${cidades[i]}');
+	}
+}
+*/
+/*
+========================================================================
+EXEMPLO: MANIPULAÇÃO DE MAP E ESTADO VISUAL
+
+A)
+
+void main() {
+	Map<String, dynamic> configuracoesUsuario = {
+	'nomePerfil': 'Dan O Brabo',
+	'tema_escuro': true,
+	'notificacoes_ativas': false,
+	'idioma': 'pt-BR'
+	}; 
+	
+	print('Iniciando sessão para o usuário: ${configuracoesUsuario['nomePerfil']}');
+	
+	//Fazendo o teste lógico se a chave específica carrega o valor 'treu'
+	if (configuracoesUsuario['tema_escuro'] == true) {
+	print('');
+	print('   APLICANDO MODO ESCURO VISUAL (DARK)...   ');
+	print('');
+	} else { 
+	print('');
+	print('   APLICANDO MODO CLARO VISUAL (LIGHT)...   ');
+	print('');
+	}
+}
+*/
 
 
 
