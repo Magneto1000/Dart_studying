@@ -173,20 +173,86 @@ os números dos índices, o for-in limpa a sintaxe. Ele extraí cada item da lis
 a cada cilco.
 ==================================================================
 Exemplos...
-A)*/
+A)
 void main(){
   List<String> linguagens = ['Dart', 'Python', 'C'];
   for (var linguagem in linguagens) {  
     print('Tecnologia ativa: $linguagens');
   } 
 }
+====================================================================
+O LOOP while (Condicional)
+O while (enquanto) é um laço baseado puramente em uma condição booleados externa.
+Ele continuará rodando indeterminadamente até que a condição de teste se torna falsa.
+Esse tipo de loop exige um graú de atenção com a condição interna, pois o seu esquimento poderá 
+incorrer em travamente por loop infinito.
+=====================================================================
+EXEMPLOS...
+A)
+void main(){
+	int bateria = 3;
+	while (bateria > 0) {
+		print('Dispositivo ligado. Bateria: $bateria');
+		bateria--; // Determina o valor para que o loop tenha um fim.
+	}
 
 
+------------------------------------------------------------------------
+B)
+void main() {
 
+	int lancamento = 0; // COndição externa do loop
+	
+	while (lancamento < 11) {
+		print('Contagem repgressiva para o lançamento do foguete Marrokus I: $lancamento');
+		lancamento++; // Condição interna para o encerramento do loop.
+	}
+}
+------------------------------------------------------------------------
+C) 
+void main() {
+	int contar = 0;
+	
+	while (contar < 4) {
+		print('Contar até: $contar');
+		contar++;
+	}
+}
+------------------------------------------------------------------------
+D)
+void main() {
+	int contarN = 0;
+	
+	while (contarN < 6) {
+		print('Vamos contar até: $contarN');
+		contarN++;
+	}
+}
+========================================================================
+DESAFIO FINAL DO DIA 2
 
+Neste exercício, vamos usar o lopp for tradicional para varrer uma lista e usar a variável
+contadora i para formatar a numeração de exibição na tela.*/
 
-
-
+void main() {
+	List<String> funcionalidades = [
+		'Autentificação Biométrica',
+		'Perfil de Desenvolvedor',
+		'Painel Administrativo Germini',
+		'Configuração de Segurança',
+		'Histórica de Métricas'
+	];
+	
+	print('--- MENU DE FUNCIONALIDADES ---');
+	print('-------------------------------');
+	
+	// O loop começa em 0 e vai até o tamanho máximo da lista (.lenght)
+	for (int i = 0; i < funcionalidades.length; i++) {
+		print('${i + 1} . ${funcionalidades[i]}');
+		print('====================================');
+	}
+	print('---------------------------------------');
+}
 
 
 
