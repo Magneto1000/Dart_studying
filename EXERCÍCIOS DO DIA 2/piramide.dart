@@ -57,3 +57,73 @@ void main() {
 }
 =========================================================================================
 2. Abordagem Elegante, estilo Seiku (O "jeito Dart de programar")
+
+O Dart possuí recursos modernos nas suas coleções que permitem reduzir darsticamnete
+o uso de laços repetitivos. Podemos usar o operador de multiplicação de de Strings(")
+para repetir os caracteres. Um jeito limpo e elegante de programar. 
+
+void main() {
+	int altura = 5;
+	
+	for (int i = 0; i < altura; i++) {
+		// Multiplicamos o caractere de espaço e o do asterísco diretamente pelas formúlas
+		String espacos = ' ' * (altura - i - 1);
+		String asteriscos = '*' * (2 * i - 1);
+	// Imprime a linha mostrada de uma vez só
+		print('$espacos$asteriscos');
+	}
+}
+--------------------------------------------------------------------------------------
+2.1 Com 7 colunas de altura
+
+void main() {
+	int altura = 7;
+	
+	for (int i = 0; i < altura; i++) {
+		//Multiplicamos os caracteres de espaço e o de asterísco diretamente pelas fórmulas abaixo.
+		String espacos = ' ' * (altura - i - 1);
+		String asteriscos = '*' * (2 * i - 1);
+		
+		//Imprime a linha marcada de uma vez só
+		print('$espacos$asteriscos');
+	}
+}
+-------------------------------------------------------------------------------------
+2.2 
+void main() {
+	int altura = 10;
+	
+	for (int i = 0; i < altura; i++) {
+		String espacos =  ' ' * (altura - i - 1);
+		String	asteriscos =  '*' * (2 * i - 1);
+		print('$espacos$asteriscos');
+	}
+}
+-------------------------------------------------------------------------------------
+2.3
+
+void main() {
+	int altura = 15;
+	
+	for (int i = 0; i < altura; i++) {
+		String espacos = ' ' * (altura - i - 1);
+		String asteriscos = '*' * (2 * i - 1);
+		print('$espacos$asteriscos');
+	}
+-------------------------------------------------------------------------------------
+2.4 Solicitando a altura para o usuário */
+
+import 'dart:io';
+
+void main() {
+	print('Digite a aluta que você deseja construir a sua pirânide: ');
+	String? altura = stdin.readLineSync();
+
+	for (int i = 0; i < altura; i++) {
+		String espacos = ' ' * (altura - i - 1);
+		String asteriscos = '*' * (2 * i - 1);
+		print('$espacos$asteriscos');
+	}
+}
+
+}
