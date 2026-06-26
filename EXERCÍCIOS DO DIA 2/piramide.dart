@@ -24,4 +24,36 @@ fórmula (2 X i) +1.
   * Na linha 1: (2 X 1) + 1 = 3 asterísco.
   * Na linha 2: (2 X 2) + 1 = 5 asterísco.
   * Na linha 3: (2 X 3) + 1 = 7 asterísco.
-*/
+=====================================================================
+1. Abordagem com Laços Aninhados
+
+Para construirmo de forma procedural pura, usamos o for principal para ocntrolar
+as linhas, um for interno para dsenhar os espaços daquela linha, e outro for interno 
+para desenhar os asteríscos.
+
+Para imprimir na mesma linha sem quebrar a linha utomaticamente (O que o print naturalmente faz), 
+usamos o comando stdout.write() presente na biblioteca dart:io.
+Exemplo:
+
+import 'dart:io';
+void main() {
+  int altura = 5;
+
+  print('---- Gerador de pirâmides v1.0 ----');
+
+  // Loop 1: Controla as linhas 9vertical)
+  for (int i = 0; i < altura; i++) {
+    // Loop 2: Desenha os espaços em branco necessários (horizontal)
+    for (int j = 0; j < (altura - i - 1); j++) {
+      stdout.write(' '); //Imprime o espaço sem quebrar a linha
+    }
+  // Loop 3: Desenha os asteríscos necessários (Horizontal)
+  for (int k = 0; k < (2 * i + 1); k++) {
+    stdout.write('*'); // Imprime o asterísco sem quebrar a linha
+  }
+  // O seguinte print colocado após o desenho dos espaços e asteríscos da linha atiual visaquebrar a linha
+  print('');
+  }
+}
+=========================================================================================
+2. Abordagem Elegante, estilo Seiku (O "jeito Dart de programar")
