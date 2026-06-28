@@ -111,7 +111,7 @@ void main() {
 		print('$espacos$asteriscos');
 	}
 -------------------------------------------------------------------------------------
-2.4 Solicitando a altura para o usuário */
+2.4 Solicitando a altura para o usuário 
 
 import 'dart:io';
 
@@ -126,3 +126,50 @@ void main() {
 	}
 }
 -------------------------------------------------------------------------------------
+2.5 Solicitando a altura para o usuário, parte 2.
+import 'dart:io';
+void main() {
+  print('Por favor, digite a altura que quer que a sua pirâmide tenha:');
+  String? entradaAltura = stdin.readLineSync();
+  int altura = int.parse(entradaAltura!);
+
+  for (int i = 0; i < altura; i++) {
+    String espacos = ' ' * (altura - i - 1);
+    String asteriscos = '*' * (2 * i + 1);
+    print('$espacos$asteriscos');
+  }
+}
+---------------------------------------------------
+2.6 Solicitando a altura da pirâmide ao usuário.
+
+//Importando a biblioteca 'dart:io' para ler dados do usuário
+import 'dart:io';
+
+void main() {
+  print('Digite, por favor, a altura que sua pirâmide deverá ter:');
+  String? dadosEntrada = stdin.readLineSync();
+// Convertendo os dados puros de entrada de String para int
+  int altura = int.parse(dadosEntrada!);
+
+  for (int i = 0; i < altura; i++) {
+    String espacos = ' ' * (altura - i - 1); 
+    String asteriscos = '*' * (2 * i + 1);
+    print('$espacos$asteriscos');
+  }
+}
+-----------------------------------------------
+2.7 Solcitando ao usuário a altura da pirÂmide.
+
+import 'dart:io'; // Importando a biblioteca que permite ler dados de entrada
+
+void main() {
+  print('Qual a altura que você quer que a sua pirâmide tenha:');
+  String? dadosEntrada = stdin.readLineSync();
+  int altura = int.parse(dadosEntrada!);
+
+  for (int i = 0; i < altura; i++) {
+    String espacos = ' ' * (altura - i - 1);
+    String asteriscos = '*' * (2 * i + 1);
+    print('$espacos$asteriscos');
+  } 
+}

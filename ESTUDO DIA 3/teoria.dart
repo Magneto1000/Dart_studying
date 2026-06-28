@@ -17,12 +17,24 @@ a chamou.
 ---- Toda função possuí uma assinatura formal dividida em 4 parte fundamentais:
 
 ---------------------------------------------------------------------------------------
-Dart
+Dart.exemplo
 
 tipoDoRetorno nomeDaFuncao (tiopDoParametro parametro) {
 	// Corpo da função (escopo isolado)
 	return valorResultante;
 }
+----------------------------------------------------------------------------------------
+* TIPO DE RETORNO -> Específica rigidamente o tipo de dado que a função devolveria 
+(ex.: String, int, double). Se ela apenas executar um ação sem devolver nada, usamos void.
 
+* NOME DA FUNÇÃO -> Identificador em formato lowerCamelCse.
 
+* PARÂMETROS: Variáveis locais que recebem os dados externos necessários para a execuçãop do algoritmo.
+
+* return: A palavra reservada que encerra a execução da função e despacha o valor resultante
+de volta parao fluxo principal.
+
+----------------------------------------------------
+2. PARAMÊTROS OBRIGATÓRIOS vs. NOMEADOS PPCIONAIS
+----------------------------------------------------
 
