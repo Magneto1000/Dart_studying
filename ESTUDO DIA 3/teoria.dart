@@ -143,3 +143,37 @@ Dart.
 int somar(int a, int b) => a + b; // O resultado da conta é retornando automaticamente
 ----------->
 =============================================================================
+EXERCÍCIO PRÁTICO: SIMULADOR DE COMPONENTE VISUAL (criarBotao)
+
+Vamos aplicar todos esses conceitos de arquitetura modular para construir a função pedida.
+Utilizando parâmetros nomeados, obrigatoriamente, valores padrões e interpolação limpa de
+Strings.
+
+--------------------------------------------------------------*/
+
+import 'dart:io';
+
+	// Declaração da função com parâmetros nomeados estruturados
+	// 'Texto' é estritamente obrigatório. 'cor' é opcional e assume 'azul' por  padrão
+	String criarBotao({required String texto, String cor = 'azul'}) {
+		return 'Botao [$texto] criado com sucesso na cor [$cor].';
+	}
+void main() {
+	//print('--- SISTEMA DE RENDERIZAÇÃO DE UI (GERMINI) ---\m');
+	
+	// Teste 1: Passando apenas o parâmetro obrigatório (deve assumir a cor padrão)
+	String botaoSalvar = criarBotao(texto: 'salvar');
+	print(botaoSalvar);
+	
+	// Texte 2: Passando ambos os parâmetros nomeados (altarando a ordem propositalmente)
+	String botaoCancelar = criarBotao(cor: 'vermelho', texto: 'Cancelar');
+	print(botaoCancelar);
+	
+	// Teste 3: Criando um botão para o app Cityzem 
+	String botaoEnviarDado = criarBotao(texto: 'Enviar Gasto Público', cor: 'verde');
+	print(botaoEnviarDado);
+}
+
+
+
+
