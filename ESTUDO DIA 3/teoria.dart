@@ -45,7 +45,7 @@ São aqueles definidos por padrão. Quem invoca a função é obrigado a passar 
 exatamente na mesma ordem em que foram declaradas.
 
 ----------------------------------------------------
-Dart.exemplo
+Dart.exemple.a
 
 // Declaração
 void conectarBanco(String url, int porta) {
@@ -56,6 +56,26 @@ void main() {
   conectarBnaco('Localhost', 5432);
 }
 -----------------------------------------------------------
+Dart.exemple.b (repeated)
+// Declaração
+void conectarBanco(String url, int porta) {
+  print('Conectando a $url na porta $porta');
+}
+void main() {
+  // Execução obrigatória respeitando a ordem principal
+  conectarBanco('Localhost', 5432);
+}
+-----------------------------------------------------------
+Dart.exemple.c (repeated)
+// Declaração
+void concetarBanco(String url, int porta) {
+  print('Conectando a $url na porta $porta');
+}
+void main() {
+  // Execução obrigatório respeitando a ordem principal
+  conectarBanco('Localhost', 5432);
+}
+----------------------------------------------------------
 
 OBSERVAÇÃO: A desvantagem é se a função tiver muitos parâmetros, fica fácil esquecer a ordem ou o que cada valor signfíca visualmente.
 
@@ -72,7 +92,7 @@ obrigatórios mesmo dentro das chaves, usamos a palavra reservada required.
 
 Abaixo podemos ver a clareza e elegância dessa sintaxe aplicada.
 --------------------------------------------
-Dart.exemple
+Dart.exemple.a
 
 // Declaração: 'remetente' é obrigatório, 'assunto' tem um valor padrão se não for passado
 void enviarEmail({required String remetente, String assunto = 'Sem Assunto'}) {
@@ -87,7 +107,21 @@ void main() {
   enviarEmail(remetente: 'thayna@upp.com');
 }
 ---------------------------------------------------
+Dart.exemple.b (repeated)
 
+// Usando o 'required' dentro das chaves os parâmetros passam a ser obrigatórios
+void enviarEmail(required Sring remetente, String assunto = 'Sem assunto') {
+  print('De: $remetente | Assunto: $assunto');
+}
+
+void main() {
+  // A ordem não importa e o código fica extremamente legível
+  enviarEmail(assunto: 'Relatório Over Power', remetente: 'juraci@upp.com');
+
+  // Como 'assunto' tem valor padrão, posso omiti-lo com segurança
+  enviarEmail(remetente: 'thayna@uup.com');
+}
+---------------------------------------------------
 3. FUNÇÕES DE LINHA ÚNICA: Arrow Syntax ( => )
 
 Qunado escrevemos funções simples, cujo corpo executa apenas uma única expressão de código e já retorna
@@ -108,3 +142,4 @@ Versão com Arrow Syntax (Padrão Clean Code)
 Dart.
 int somar(int a, int b) => a + b; // O resultado da conta é retornando automaticamente
 ----------->
+=============================================================================
