@@ -121,9 +121,9 @@ void main() {
   // Como 'assunto' tem valor padrão, posso omiti-lo com segurança
   enviarEmail(remetente: 'thayna@uup.com');
 }
----------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 3. FUNÇÕES DE LINHA ÚNICA: Arrow Syntax ( => )
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Qunado escrevemos funções simples, cujo corpo executa apenas uma única expressão de código e já retorna
 e já retorna o resultando imediatamente, o uso de chaves {} e da palavra return
 gera uma poluição visual desnecessária.
@@ -140,8 +140,28 @@ int somar(int a, int b) {
 --------->
 Versão com Arrow Syntax (Padrão Clean Code)
 Dart.
+
 int somar(int a, int b) => a + b; // O resultado da conta é retornando automaticamente
------------>
+void main() {
+	int resultado = somar(2, 4);
+	print('$resultado');
+}
+-----------> 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+EXEMPLOS PRÁTICOS (10)
+===========================================================================
+1. FORMATAÇÃO DE STRING
+
+// Declaração da função Arrow Syntax
+String obterNomeCompleto(String nome, String sobrenome) => '$nome $sobrenome';
+
+void main() {
+
+	String nomeCompleto = obterNomeCompleto('Juraci','Neto');
+	print('$nomeCompleto');
+
+}
+*/ 
 =============================================================================
 EXERCÍCIO PRÁTICO: SIMULADOR DE COMPONENTE VISUAL (criarBotao)
 
@@ -149,8 +169,7 @@ Vamos aplicar todos esses conceitos de arquitetura modular para construir a fun�
 Utilizando parâmetros nomeados, obrigatoriamente, valores padrões e interpolação limpa de
 Strings.
 
---------------------------------------------------------------*/
-
+--------------------------------------------------------------
 import 'dart:io';
 
 	// Declaração da função com parâmetros nomeados estruturados
@@ -173,7 +192,69 @@ void main() {
 	String botaoEnviarDado = criarBotao(texto: 'Enviar Gasto Público', cor: 'verde');
 	print(botaoEnviarDado);
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+UM POUCO SOBRE O MÉTODO: int.parse()
+****************************************************************************
+MÉTODO 1: int.parse()
+*****************************************************************************
+==> Usa-se o int.parse() quando se tem a certeza absoluta de que o texto contém apenas
+números (por exemplo, quando o dado vem travado do banco de dados).
+--------------
+exemple1.
 
+Dart
+void main() {
+	String textoEntrada = '2026';
 
+	// Realizando a conversão direta
+	int anoConvertido = int.parse(textoEntrada);
+	
+	print('anoCOnvertido + 4'); // Resultado: 230 (Operação é bem sucedida!) 
+} 
+-----------------
+O risco está se a String foi "2026a ou vinte" o int,perse() vai disparar um excessão de formato 
+(FormatException)
+e o programa vai trava imediatamente.
 
+Caso ocorra que o valor de entrada seja nulo, há uma forma de forçar o Dart a aceitar, que é usando o
+potno de exclamação (!) para assegurar a linguagem que o valor não é nulo, porém, essa abordagem é deselagante. 
 
+****************************************************************
+MÉTODO 2. int.tryParse()
+*****************************************************************
+Qunado se lida com dados que vem do teclado do usuário via terminal (stdin.readLineSync()), nunca se
+pode confiar 100% no que está sendo digitado. O int.tryParse() é a melhor prática nesses casos,
+
+Pois em vez de quebrar o programa se a conversão falhar, ele simplismente devolve um valor nulo (null).
+Isso nos permite criar um sistema de proteção usando um if.
+----------------------------
+Exemple 2:
+
+import 'dart:io';
+
+void main() {
+	print('Digite a sua idade:');
+	String? entrada = stdin.readLineSync();
+	int? idade = int.tryParse(entrada ?? '');
+	// O trPparse() tenta converter. Se o usuário digitar "abc", no campo da idade vira null.
+	
+	if (idade == null) {
+		print('Erro! Você não digitou um número válido...');
+	} else {
+		print('Okay! Senha válida...');
+	}
+}
+-----------------------------------------
+######################################################################33
+DETALHES IMPORTANTES DO CÓDIGO
+
+# int? -idade --> O ponto de interrogação diz a linguagem Dart que a variável idade
+aceita receber um número inteiro ou um valor null (caso o usuário digite letras).
+
+# entrada ?? '' ---> O operador ?? (Null Coalescing) é uma salvaguarda. Ele diz:
+Pegue o que está na variável 'entrada'. Se lá tiver nula, passe uma 
+string vázia '' para o converosr não quebrar.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+*/
