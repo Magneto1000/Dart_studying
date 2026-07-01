@@ -162,7 +162,7 @@ void main() {
 
 }
 =================================================================
-2. SOMANDO NÚMEROS*/
+2. SOMANDO NÚMEROS
 
 import 'dart:io';
 
@@ -183,6 +183,56 @@ void main() {
 
 
 }
+==============================================
+3. INSERINDO NOMES 
+import 'dart:io';
+
+String obterNome(String nome, String sobrenome) => '$nome $sobrenome';
+
+
+void main() {
+
+print('====== SISTEMA DE CADASTRO ATM =====');
+
+stdout.write('Digite o seu nome por favor: ');
+String nomeImput = stdin.readLineSync() ?? '';
+
+stdout.write('Digite o seu sobrenome por favor: ');
+String sobrenomeImput = stdin.readLineSync() ?? '';
+String nomeCompleto = obterNome(nomeImput, sobrenomeImput);
+
+print('O nome completo: $nomeCompleto foi cadastrado.');
+print('\nSeja bem-vindo, $nomeCompleto a ATM!!');
+}
+==============================================================
+4. NOME E IDADE*/
+
+// Importando a biblioteca 'dart:io'
+import 'dart:io';
+String dados(String nome, String idade) => '&nome, &idade';
+
+void main() {
+print('Vamos criar a sua conta?');
+print('\nDigite o seu nome e a sua idade abaixo');
+print('--------------------------------------------');
+
+	stdout.write('Digige o seu nome completo, por favor: ');
+	String nomeEntrada = stdin.readLineSync() ?? '';
+
+	stdout.write('Digite a sua idade: ');
+	String idadeEntrada = stdin.readLineSync() ?? '';
+
+	int idadeConvertida = int.parse(idadeEntrada);
+
+	String dadosCompletos = dados(nomeEntrada, idadeEntrada); 
+	if (idadeConvertida < 18) {
+		print('Infelizmente, em virtude de nossas políticas de cadastro, menores de \n18 anos não podem se cadstrar.');
+	
+	} else {
+		print('Cadastro realizado! Bem-Vindo, $nomeEntrada');
+	}
+}
+
 
 
 /* 
