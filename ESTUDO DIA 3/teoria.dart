@@ -161,7 +161,31 @@ void main() {
 	print('$nomeCompleto');
 
 }
-*/ 
+=================================================================
+2. SOMANDO NÚMEROS*/
+
+import 'dart:io';
+
+int somar(int numero1, int numero2) => numero1 + numero2;
+
+void main() {
+	print('---- CALCULADORA DE SOMA ----');
+	
+	stdout.write('Digite o primeiro número: ');
+	int n1 = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
+	
+	stdout.write('Digite o segundo número: ');
+	int n2 = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
+	
+	int resultado = somar(n1, n2);
+	
+	print('O resultado da soma entre $n1 e $n2 é: $resultado');
+
+
+}
+
+
+/* 
 =============================================================================
 EXERCÍCIO PRÁTICO: SIMULADOR DE COMPONENTE VISUAL (criarBotao)
 
@@ -209,7 +233,7 @@ void main() {
 	// Realizando a conversão direta
 	int anoConvertido = int.parse(textoEntrada);
 	
-	print('anoCOnvertido + 4'); // Resultado: 230 (Operação é bem sucedida!) 
+	print('anoConvertido + 4'); // Resultado: 230 (Operação é bem sucedida!) 
 } 
 -----------------
 O risco está se a String foi "2026a ou vinte" o int,perse() vai disparar um excessão de formato 
@@ -236,7 +260,7 @@ void main() {
 	print('Digite a sua idade:');
 	String? entrada = stdin.readLineSync();
 	int? idade = int.tryParse(entrada ?? '');
-	// O trPparse() tenta converter. Se o usuário digitar "abc", no campo da idade vira null.
+	// O tryParse() tenta converter. Se o usuário digitar "abc", no campo da idade vira null.
 	
 	if (idade == null) {
 		print('Erro! Você não digitou um número válido...');
