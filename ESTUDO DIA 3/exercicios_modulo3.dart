@@ -10,7 +10,7 @@ VÁLIDA (true) SE TIVER MAIS DE 8 CARACTERS E NÃO FOR IGUAL A "123455678".
  
 * NO main: PEÇA PARA O USUÁRIO DIGITAR UMA SENHA VIA TERMINAL, CHAME A FUNÇÃO
 E EXIBA SE A SENHA ATENDE AOS REQUISITOS DE SEGURANÇA DO SISTEMA.
-========================================================================*/
+========================================================================
 // Importando a biblioteca dart:io para receber dados externos
 import 'dart:io';
 
@@ -40,23 +40,5 @@ void main() {
 		print('Senha Inválida!');
 	}
 }
-*/
-import 'dart:io';
 
-int somar(int numero1, int numero2) => numero1 + numeero2;
-
-void main() {
-	print('---- CALCULADORA DE SOMA ----');
-	
-	stdout.write('Digite o primeiro número: ');
-	int n1 = int.tryParse(stdin.readLineSync() ?? '') ?? 0);
-	
-	stdout.write('Digite o segundo número: ');
-	int n2 = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
-	
-	int resultado = somar(n1 + n2);
-	
-	print('O resultado da soma entre $n1 e $n2 é: $resultado');
-
-
-}
+ 

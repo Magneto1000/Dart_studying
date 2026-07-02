@@ -35,7 +35,7 @@ tipoDoRetorno nomeDaFuncao (tiopDoParametro parametro) {
 de volta parao fluxo principal.
 
 ----------------------------------------------------
-2. PARAMÊTROS OBRIGATÓRIOS vs. NOMEADOS PPCIONAIS
+2. PARAMÊTROS OBRIGATÓRIOS vs. NOMEADOS OPCIONAIS
 ----------------------------------------------------
 O Dart possuí um dos sistemas de parametização mais flexíveis e expressivos entre as linguagens modernas.
 Ele divide os parâmetros em duas categorias.
@@ -76,6 +76,23 @@ void main() {
   conectarBanco('Localhost', 5432);
 }
 ----------------------------------------------------------
+Dart.exemple.d
+//Declarção
+void nomeIdade(String nome, int idade) {
+	print('Seu nome é: $nome e sua idade é: $idade anos.');
+}
+void main() {
+	//Execução Obrigatória
+	conectarBanco('Juraci Nunes Tito Neto', 33);
+}
+
+
+
+
+
+
+
+-----------------------------------------------------------
 
 OBSERVAÇÃO: A desvantagem é se a função tiver muitos parâmetros, fica fácil esquecer a ordem ou o que cada valor signfíca visualmente.
 
@@ -246,6 +263,17 @@ double soma = somandoNumeros(2.4,2.1,3,100.4);
 ============================================================================
 6. CRIANDO 2 FUNÇÕES E EXIBINDO SEUS RETORNO*/
 
+import 'dart:io';
+
+void nomes(requerd Sting nomeCompleto1, String nomecompleto2 = 'Contactado' );
+	print('Contactar pessoas: Inciciar');
+
+void main() {
+	stdout.wirte('Digite o nome completo para contactar:');
+	String nomeContactar = studin.readLineSync() ?? '';
+
+
+}
 /* 
 =============================================================================
 EXERCÍCIO PRÁTICO: SIMULADOR DE COMPONENTE VISUAL (criarBotao)

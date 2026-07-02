@@ -118,7 +118,7 @@ import 'dart:io';
 void main() {
 	print('Digite a aluta que você deseja construir a sua pirânide: ');
 	String? alturaInserida = stdin.readLineSync();
-	int altura = int.parse(alturaInserida1);
+	int altura = int.parse(alturaInserida1!);
 
 	for (int i = 0; i < altura; i++) {
 		String espacos = ' ' * (altura - i - 1);
