@@ -205,7 +205,7 @@ print('O nome completo: $nomeCompleto foi cadastrado.');
 print('\nSeja bem-vindo, $nomeCompleto a ATM!!');
 }
 ==============================================================
-4. NOME E IDADE*/
+4. NOME E IDADE
 
 // Importando a biblioteca 'dart:io'
 import 'dart:io';
@@ -232,8 +232,19 @@ print('--------------------------------------------');
 		print('Cadastro realizado! Bem-Vindo, $nomeEntrada');
 	}
 }
+===========================================================================
+5. SOMANDO 4 NÚMEROS DIFERENTES (INCLUIDO NÚMEROS COM PPONTO FLUTUANTE)
 
+import 'dart:io';
+double somandoNumeros(double numero1, double numero2, double numero3, double numero4) => numero1 + numero2 + numero3 + numero4;
 
+void main() {
+double soma = somandoNumeros(2.4,2.1,3,100.4);
+
+  print('$soma');
+}
+============================================================================
+6. CRIANDO 2 FUNÇÕES E EXIBINDO SEUS RETORNO*/
 
 /* 
 =============================================================================
