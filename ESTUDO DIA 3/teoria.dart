@@ -265,14 +265,26 @@ double soma = somandoNumeros(2.4,2.1,3,100.4);
 
 import 'dart:io';
 
-void nomes(requerd Sting nomeCompleto1, String nomecompleto2 = 'Contactado' );
+void nomes({required String nomeCompleto1, String? nomeCompleto2}) {
 	print('Contactar pessoas: Inciciar');
+}
+void telefones({required int numero1, int? numero2}) {
+}
 
 void main() {
-	stdout.wirte('Digite o nome completo para contactar:');
-	String nomeContactar = studin.readLineSync() ?? '';
+	stdout.write('Digite o nome 1º nome completo para contactar:');
+	String nomeContactar1 = stdin.readLineSync() ?? '';
+
+  stdout.write('Digite o nome 2º nome completo para contactar:');
+	String nomeContactar2 = stdin.readLineSync() ?? '';
 
 
+  int tell1 = 1234554454;
+  int tell2 = 2344990955;
+
+  telefones(numero1: tell1, numero2: tell2);
+  nomes(nomeCompleto1: nomeContactar1, nomeCompleto2: nomeContactar2);  
+  print('Foi feito um contato com os seguintes nomes: $nomeContactar1 e $nomeContactar2, \ncujos números são respectivamente: $tell1 e $tell2.');
 }
 /* 
 =============================================================================
