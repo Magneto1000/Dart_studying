@@ -261,7 +261,7 @@ double soma = somandoNumeros(2.4,2.1,3,100.4);
   print('$soma');
 }
 ============================================================================
-6. CRIANDO 2 FUNÇÕES E EXIBINDO SEUS RETORNO*/
+6. CRIANDO 2 FUNÇÕES E EXIBINDO SEUS RETORNO
 
 import 'dart:io';
 
@@ -285,6 +285,25 @@ void main() {
   telefones(numero1: tell1, numero2: tell2);
   nomes(nomeCompleto1: nomeContactar1, nomeCompleto2: nomeContactar2);  
   print('Foi feito um contato com os seguintes nomes: $nomeContactar1 e $nomeContactar2, \ncujos números são respectivamente: $tell1 e $tell2.');
+}
+=============================================================================
+7. FUNÇÕES MATEMÁTICAS (POTÊNCIA)*/
+
+import 'dart:io';
+void potencia({required double valor1, double valor 2 = 0}) {
+	return valor1 ** valor2;
+}
+
+void main() {
+	stdout.write('Digite o primeiro número que será a base da potência: ');
+	double valorInserido1 = stdin.readLineSync() ?? '';
+	
+	stdout.write('Digite o segundo número que será o expoente da potencia: ');
+	double valorInserido2 = stdin.readLineSync() ?? '';
+ 
+	double resultado = potencia(valorInserido1, valorInserido2);
+	
+	print('O resultado da operação de potencial de base $valorInserido1 com expoente $numeroInserido2 é $resultado');
 }
 /* 
 =============================================================================
