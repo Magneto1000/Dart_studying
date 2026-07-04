@@ -289,21 +289,25 @@ void main() {
 =============================================================================
 7. FUNÇÕES MATEMÁTICAS (POTÊNCIA)*/
 
+import 'dart:math';
 import 'dart:io';
-void potencia({required double valor1, double valor 2 = 0}) {
-	return valor1 ** valor2;
+double potencia({required double valor1, double valor2 = 0}) {
+	return pow(valor1, valor2).toDouble();
 }
 
 void main() {
 	stdout.write('Digite o primeiro número que será a base da potência: ');
-	double valorInserido1 = stdin.readLineSync() ?? '';
+	String valorInserido1 = stdin.readLineSync() ?? '';
 	
 	stdout.write('Digite o segundo número que será o expoente da potencia: ');
-	double valorInserido2 = stdin.readLineSync() ?? '';
+	String valorInserido2 = stdin.readLineSync() ?? '';
  
-	double resultado = potencia(valorInserido1, valorInserido2);
+	double valorA = double.tryParse(valorInserido1) ?? 0.0;
+	double valorB = double.tryParse(valorInserido2) ?? 0.0;
 	
-	print('O resultado da operação de potencial de base $valorInserido1 com expoente $numeroInserido2 é $resultado');
+	double resultado = potencia(valor1: valorA, valor2: valorB);
+
+	print('O resultado da operação de potencial de base $valorA com expoente $valorB \né: $resultado');
 }
 /* 
 =============================================================================
