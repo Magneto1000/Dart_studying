@@ -287,7 +287,7 @@ void main() {
   print('Foi feito um contato com os seguintes nomes: $nomeContactar1 e $nomeContactar2, \ncujos números são respectivamente: $tell1 e $tell2.');
 }
 =============================================================================
-7. FUNÇÕES MATEMÁTICAS (POTÊNCIA)*/
+7. FUNÇÕES MATEMÁTICAS (POTÊNCIA)
 
 import 'dart:math';
 import 'dart:io';
@@ -309,6 +309,38 @@ void main() {
 
 	print('O resultado da operação de potencial de base $valorA com expoente $valorB \né: $resultado');
 }
+============================================================================
+8. FUNÇÕES E LISTAS (PAFRÃO CRUD ---> CRIAR, LER, ATUALIZAR E DELETAR)*/
+
+// 1. FUnção que insere um novo elemento na lista
+void adicionarItem(List<String> lista, String item) {
+	lista.add(item); // O métdodo add() empurra o texto para o fim da lista
+}
+
+// 2. Para esta função que apenas visualiza os elementos usando o loop for-in
+void visualizarLista(List<String> lista) {
+	print('------ Conteúdo da Lista ------');
+	
+	for (String elemento in lista) {
+		print('-> $elemento' );
+	}
+	print('--------------------------------\n');
+}
+
+void main() {
+	// Criamos a nossa lista vázia
+	List<String> meusJogos = [];
+	
+	// Usamos a função para inserir elementos
+	adicionarItem(meusJogos, 'Star Wars: Survivor');
+	adicionarItem(meusJogos, 'Dragon Ball Z: Kakarot');
+	adicionarItem(meusJogos, 'Chess.com Mobile');
+
+	// Usando a função para visualizar o resultado
+	visualizarLista(meusJogos);
+
+}
+============================================================================
 /* 
 =============================================================================
 EXERCÍCIO PRÁTICO: SIMULADOR DE COMPONENTE VISUAL (criarBotao)
