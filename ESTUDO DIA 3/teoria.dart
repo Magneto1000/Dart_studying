@@ -310,7 +310,7 @@ void main() {
 	print('O resultado da operação de potencial de base $valorA com expoente $valorB \né: $resultado');
 }
 ============================================================================
-8. FUNÇÕES E LISTAS (PAFRÃO CRUD ---> CRIAR, LER, ATUALIZAR E DELETAR)*/
+8. FUNÇÕES E LISTAS (PAFRÃO CRUD ---> CRIAR, LER, ATUALIZAR E DELZETAR)
 
 // 1. FUnção que insere um novo elemento na lista
 void adicionarItem(List<String> lista, String item) {
@@ -341,6 +341,39 @@ void main() {
 
 }
 ============================================================================
+9. FUNÇÕES E LISTAS PADRÃO CRUD --> (CRIAR, LER, ATUALIZAR E DELETAR) */
+
+// 1. Função que insere um novo elemento numa lista
+void adicionarItem(List<String> lista, String item) {
+	lista.add(item);
+}
+
+// 2. Para esta função que apenas visauliza os elementos da lista usamos o loop for-in
+void visualizarLista(List<String> lista) {
+	print('---- Conteúdo da Lista ----');
+	
+	for (String elemento in lista) {
+		print('-> $elemento');
+	}
+	
+	print('----------\n');
+}
+void main() {
+
+	// Criamos a nossa lista
+	List<String> meusJogos = [];
+	
+	// Usamos a função para inserirmos os elementos
+	adicionarItem(meusJogos, 'BombaPatch: 100% Atualizado');
+	adicionarItem(meusJogos, 'Dragon Ball : Buddekai Tekachin 3');
+	adicionarItem(meusJogos, 'Halo 3');
+	
+	// Usamos a função para visualizrmos o resultado
+	visualizarLista(meusJogos);
+}
+
+
+
 /* 
 =============================================================================
 EXERCÍCIO PRÁTICO: SIMULADOR DE COMPONENTE VISUAL (criarBotao)
