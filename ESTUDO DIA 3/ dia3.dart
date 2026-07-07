@@ -373,7 +373,7 @@ void main() {
 }
 
 ==========================================================================
-10. CRIANDO UMA LISTA DE NÚMEROS COM FUNÇÕES E VISUALIZANDO */
+10. CRIANDO UMA LISTA DE NÚMEROS COM FUNÇÕES E VISUALIZANDO
 
 import 'dart:io';
 
@@ -394,8 +394,8 @@ void visualizarNumeros(List<int> lista) {
 		return;
 	}
 	
-	// O laoço for serve para ter acesso ao elemento ao índice "i" e enumerar a tela
-	for (int i=0; i < lista.length; i++) {
+	// O laço "for" serve para ter acesso ao elemento ao índice "i" e enumerar a tela
+	for (int i = 0; i < lista.length; i++) {
 		// Trecho que soma o +1 ao índice "i", para que o usuário veja a contagem apartir do 1º.
 		print('${i + 1}º Elemento --> [${lista [i]}]');
 	}
@@ -412,22 +412,18 @@ void main() {
 	List<int> minhaLista = [];
 
 	
-	//Laço de repetição para limitar a quantidade de números solicitadps
-	for (int i=0; i < 10; i++) {
+	//Laço de repetição para limitar a quantidade de números solicitados
+	for (int i = 0; i < 10; i++) {
 		print('Número ${i + 1} de 10:');
 		int numeroDigitado = insereNumeros();
 		
-		// O método .add insere o número dentro da lista
+		// O método ".add" insere o número dentro da lista
 		minhaLista.add(numeroDigitado);
 	}
 	
 	visualizarNumeros(minhaLista);
 }
 
-
-
-
-/* 
 =============================================================================
 EXERCÍCIO PRÁTICO: SIMULADOR DE COMPONENTE VISUAL (criarBotao)
 
