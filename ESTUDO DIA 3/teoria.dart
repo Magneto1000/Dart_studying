@@ -341,7 +341,7 @@ void main() {
 
 }
 ============================================================================
-9. FUNÇÕES E LISTAS PADRÃO CRUD --> (CRIAR, LER, ATUALIZAR E DELETAR) */
+9. FUNÇÕES E LISTAS PADRÃO CRUD --> (CRIAR, LER, ATUALIZAR E DELETAR)
 
 // 1. Função que insere um novo elemento numa lista
 void adicionarItem(List<String> lista, String item) {
@@ -371,6 +371,59 @@ void main() {
 	// Usamos a função para visualizrmos o resultado
 	visualizarLista(meusJogos);
 }
+
+==========================================================================
+10. CRIANDO UMA LISTA DE NÚMEROS COM FUNÇÕES E VISUALIZANDO */
+
+import 'dart:io';
+
+// Função que Captura um número por vez
+int insereNumeros() {
+	stdout.write('Digite um número inteiro qualquer para adicionarmos a nossa lista: ');
+	int entrada = int.tryParse(stdin.readLineSync() ?? '')  ?? 0;
+	return entrada;
+}
+
+// Função para visualizar a lista enumerada (Responsabilidade: receber a lista e printar em ordem)
+void visualizarNumeros(List<int> lista) {
+	print('=== SEUS NÚMEROS ===');
+
+	// Se a lista estiver vázia, avisamos ao usuário
+	if (lista.isEmpty) {
+		print('A lista está vázia!');
+		return;
+	}
+	
+	// O laoço for serve para ter acesso ao elemento ao índice "i" e enumerar a tela
+	for (int i=0; i < lista.length; i++) {
+		// Trecho que soma o +1 ao índice "i", para que o usuário veja a contagem apartir do 1º.
+		print('${i + 1}º Elemento --> [${lista [i]}]');
+	}
+	
+	print('===================================');
+}
+
+
+void main() {
+	
+	print('Gerenciamento da sua lista'); 
+
+	//Lista de números inteiros vázias
+	List<int> minhaLista = [];
+
+	
+	//Laço de repetição para limitar a quantidade de números solicitadps
+	for (int i=0; i < 10; i++) {
+		print('Número ${i + 1} de 10:');
+		int numeroDigitado = insereNumeros();
+		
+		// O método .add insere o número dentro da lista
+		minhaLista.add(numeroDigitado);
+	}
+	
+	visualizarNumeros(minhaLista);
+}
+
 
 
 
