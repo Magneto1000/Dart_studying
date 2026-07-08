@@ -35,7 +35,7 @@ CAPAZ DE FAZER.
 EXEMPLE DART.
 
 - class Celular {
--	// Atributos (CAracteríticas)
+-	// Atributos (Caracteríticas)
 -	String marca;
 -	String modelo;
 -	int bateria = 100;	
@@ -53,10 +53,47 @@ QUANDO DIGITAMOS "Celular meuCelular = Celular();". O DART PRECISA DE UM MECANIS
 OS ATRIBUTOS DAQUELA INSTÂNCIA NA MEMÓRIA. ESSE MECANISMO É O CONSTRUTOR. 
 
 (@@@) O CONSTRUTOR É UMA FUNÇÃO ESPECIAL QUE TEM EXATO O MESMO NOME DA CLASSE E NÃO POSSUÍ TIPO DE RETORNO.
-
+                                                                                                                                                                                                                                                                                              
 --------------------------------------------------------------------------------------------------------
 
 A EVOLUÇÃO DO CONSTRUTOR NO DART
 
 SE DEIXARMOS A CLASSE SEM CONSTRUTOR. O DART CRIA UM CONSTRUTOR VÁZIO IMPLÍCITO. MAS NA ENGENHARIA DE SOFTWARE
 PROFISSIONAL, O PROCEDIMENTO CORRETO É OBRIGAR A PASSAGEM DE DADOS NO MOMENTO DA CRIAÇÃO DO OBJETO.
+
+*** ABORDAGEM TRADICIONAL (ESTILO JAVA/C#)
+
+class Usuario {
+	String nome;
+	
+	Usuario(String nomeInformado) {
+		this.nome = nomeInformado; // 'this' se refere ao atributo da própria classe
+	}
+}
+---------------------------------------------------------------------------------------------------------
+
+ATALHO SINTÁTICO DART (CONSTRUTOR COM ATRIBUIÇÃO DIRETA)
+
+O Dart elimina a necessidade de criar um corpo de função apenas para repassar variáveis. Usando o
+tris.propriedade direto na assinatura do construtor. O Dart captura o argumento e preenche
+o atributo de forma automática e instântaneamente antes mesmo do objeto nascer.
+
+
+class Usuario {
+	String nome;
+
+	// Atalho do Dart: faz exatamente a mesma coisa que o trecho referente do Java ou C#. 
+	Usuario(this.nome);
+}
+-----------------------------------------------------------------------------------------------------------
+
+3. HERANÇA (extends): A ÁRVORE GENEALÓGICA DO CÓDIGO
+
+A HERANÇA É O MECANISMO PELO QUAL UMA CLASSE (CHAMADA SUBCLASSE OU CLASSE FILHA) PODE HERDAR
+TODOS OS ATRIBUTOS E MÉTODOS DE OUTRA CLASSE (CHAMADA SUPERCLASSE OU CLASSE PAI).
+
+NO FLUTTER, ISSO É VITAL, POIS EM UM PROCESSO DE CRIAÇÃO DE UMA TELA, POR EXEMPLO, NÃO SE CRIÁ
+A TELA PARTIR DO ZERO ABSOLUTO CONVERSANDO COM A PLACA DE VÍDEO. EM SUA CONSTRUÇÃO, SE CRIA UMA CLASSE QUE
+ESTENDE (extends) AS CAPACIDADE DE UMA CLASSE BASE DO FLUTTER 
+(COMO O StatelessWidget ou StatefulWidget).   
+
