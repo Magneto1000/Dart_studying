@@ -1,3 +1,62 @@
-// ------------------------------ DIA 4 ORIENTAÇÃO A OBJETOS --------------------------------------
 
+// ------------------------------ DIA 4 ORIENTAÇÃO A OBJETOS --------------------------------------
+*/
 ===================================================================================================
+
+É IMPORTANTE DESTACAR PRIMEIRAMENTO QUE NO DART TUDO É UM WIDGET (UMA PEQUENA APLICAÇÃO), NADA MAIS QUE UMA
+INSTÂNCIA DE UMA CLASSE. COMPREENDENDO A MECÂNICA POR TRÁS DAS CLASSES, CONSTRUTORES E HERÂNÇAS A 
+COMPREENSÃO NECESSÁRIA PARA O DESENVOLVIMENTO DE APLICATIVOS SERÁ ALCANÇADA DE UMA FOMRA NATURAL E AMIGÁVEL
+POIS SE TERÁ A CAPACIDADE DE LER UM CÓDIGO FLUTTER E ENTENDER O SEU FUNCONAMENTO IMPLÍCITO.
+====================================================================================================
+
+1. CLASSES E ATRIBUTOS: O MOLDE E A MATÉRIA-PRIMA
+
+@----> CLASSES: 
+
+A CLASSE É UM MOLDE, UMA PLANTA ARQUITETÔNICA OU A FORMA DE UM BOLO. ELA NÃO EXISTE FISICAMENTE NA MEMÓRIA
+COMO UM DADO UTILIZÁVEL, ELA APENAS DEFINE REGRAS DE COMO ALGO DEVE SER CONSTRUÍDO.
+
+@----> OBJETO (INSTÂNCIA):
+
+O OBEJTO É O BOLO FÍSICO FEITO A PARTIR DA FORMA. É O ESPAÇO ALOCADO NA MEMÓRIA
+ DO COMPUTADOR CONTENDO DADOS REIAS 
+
+@-----> ATRIBUTO (PROPRIEDADES):
+
+AS PROPRIEDADES SÃO AS VARIÁVEIS DECLARADAS DENTRO DAS CLASSES. ELAS DEFINEM AS CARACTERÍSTICAS
+OU O ESTADO DO OBJETO.
+
+@-----> METÓDOS:
+
+OS METÓDOS SÃO FUNÇÕES DECLARADAS DENTRO DA CLASSE. ELAS DEFINEM O COMPORTAMENTO - O QUE O OBJETO É
+CAPAZ DE FAZER.
+
+==========================================================================================================
+EXEMPLE DART.
+
+- class Celular {
+-	// Atributos (CAracteríticas)
+-	String marca;
+-	String modelo;
+-	int bateria = 100;	
+-
+-	// Metódo (Comportamento)
+-	void ligar {
+-		print('$modelo está inicializando o sistema...');
+-	}
+-}
+=========================================================================================================
+
+2. CONSTRUTORES: A CERTIDÃO DE NASCIMENTO DO OBJETO
+
+QUANDO DIGITAMOS "Celular meuCelular = Celular();". O DART PRECISA DE UM MECANISMO PARA INICIALIZAR
+OS ATRIBUTOS DAQUELA INSTÂNCIA NA MEMÓRIA. ESSE MECANISMO É O CONSTRUTOR. 
+
+(@@@) O CONSTRUTOR É UMA FUNÇÃO ESPECIAL QUE TEM EXATO O MESMO NOME DA CLASSE E NÃO POSSUÍ TIPO DE RETORNO.
+
+--------------------------------------------------------------------------------------------------------
+
+A EVOLUÇÃO DO CONSTRUTOR NO DART
+
+SE DEIXARMOS A CLASSE SEM CONSTRUTOR. O DART CRIA UM CONSTRUTOR VÁZIO IMPLÍCITO. MAS NA ENGENHARIA DE SOFTWARE
+PROFISSIONAL, O PROCEDIMENTO CORRETO É OBRIGAR A PASSAGEM DE DADOS NO MOMENTO DA CRIAÇÃO DO OBJETO.
