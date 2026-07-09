@@ -157,3 +157,17 @@ void main() {
 	meuBotaoSalvar.renderizar();
 	
 }
+
+/*
+| --------------------------------------> DETALHES <--------------------------------------------------|
+
+* extends WIdget: DIz ao Dart que o BotaoCustomizar é um widget.
+Isso significa que se você criasse uma lista de List<Widget>, você poderia colocar 
+botões dentro dela, pois o o filho guarda a identidade do pai.
+
+* @override: Não é estritamente obrigatório para o código rodar, mas é uma diretiva
+de compilador crucial. Se amanhã você errar uma letra do método pai (ex: digitar renderisar()). 
+O @override faz o compilador acusar erro imediatamente. Salvando você de um bug silencioso. 
+------------------------------------------------------------------------------------------------------- 
+
+*/
