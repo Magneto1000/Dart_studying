@@ -1,6 +1,6 @@
 
 // ------------------------------ DIA 4 ORIENTAÇÃO A OBJETOS --------------------------------------
-*/
+/*
 ===================================================================================================
 
 É IMPORTANTE DESTACAR PRIMEIRAMENTO QUE NO DART TUDO É UM WIDGET (UMA PEQUENA APLICAÇÃO), NADA MAIS QUE UMA
@@ -93,7 +93,67 @@ A HERANÇA É O MECANISMO PELO QUAL UMA CLASSE (CHAMADA SUBCLASSE OU CLASSE FILH
 TODOS OS ATRIBUTOS E MÉTODOS DE OUTRA CLASSE (CHAMADA SUPERCLASSE OU CLASSE PAI).
 
 NO FLUTTER, ISSO É VITAL, POIS EM UM PROCESSO DE CRIAÇÃO DE UMA TELA, POR EXEMPLO, NÃO SE CRIÁ
-A TELA PARTIR DO ZERO ABSOLUTO CONVERSANDO COM A PLACA DE VÍDEO. EM SUA CONSTRUÇÃO, SE CRIA UMA CLASSE QUE
+A TELA A PARTIR DO ZERO ABSOLUTO CONVERSANDO COM A PLACA DE VÍDEO. EM SUA CONSTRUÇÃO, SE CRIA UMA CLASSE QUE
 ESTENDE (extends) AS CAPACIDADE DE UMA CLASSE BASE DO FLUTTER 
 (COMO O StatelessWidget ou StatefulWidget).   
 
+--------------------------------------------------------------------------------------------------------------
+
+O PODER DO @OVERRIDE (SUBSCRITA DE MÉTODOS)
+
+QUANDO UMA CLASSE FILHA HERDA UM MÉTODO DO PAI, ELA NÃO ESTÁ PRESA A SE COMPORTAR EXATAMENTE COMO ELE.
+ELA PODE REALIZAR UM @override O QUE SIGNÍFICA LUDICAMENTE --> "Pai eu sei que você tem o seu jeito de 
+executar esse método, mas eu vou escrever a minha própria versão deste comportamente." 
+
+---------------------------------------------------------------------------------------------------------------
+------------------------------------------EXEMPLO PRÁTICO------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
+DART.*/
+
+// 1. SUPERCLASSE (CLASSE PAI)
+
+class Widget {
+	// MÉTODO BASE QUE SERÁ HERDADO PELAS SUBACLASSES (CLASSES FILHAS)
+	void renderizar() {
+		print('Renderizando componentes básicos!');
+	}
+}
+
+// 2. A SUBCLASSE (CLASSE FILHA) QUE HERDA AS CAPACIDADES DE WIDGET
+
+class BotaoCustomizado extends Widget {
+	// ATRIBUTO ESPECÍFICO DO BOTÃO
+	String texto;
+	
+	// CONSTRUTOR UTILIZANDO O ATRIBUTO ESTRATÉGICO DO DART (this.text)
+	
+	BotaoCustomizado(this.texto);
+	
+	
+	// ANOTAÇÃO QUE AVISA O COMPILADOR QUE ESTAMOS MODIFICANDO O COMPORTAMENTO DA SUPERCLASSE
+	
+	@override
+	void renderizar() {
+		// CUSTOMIZAÇÃO DE UM COMPORTAMENTO PARA A REALIDADE DE UM BOTÃO
+		print('Renderizar o botão com o texto: $texto');
+	}
+}
+
+// 3. FLUXO PRINIPAL DE EXECUÇÃO
+
+void main() {
+	print('---- SIMULADOR DE REBDERIZAÇÃO OO (UUP ENGINE) ----\n');
+	
+	// INSTANCIANDO A CLASSE BASE PARA VER O SEU COMPORTAMENTO ORIGINAL
+	Widget componenteGenerico = Widget();
+	componenteGenerico.renderizar(); // IMPRIME O COMPORTAMENTO PADRÃO
+	
+	print('----------------------------------------------------');
+	
+	//INSTANCIANDO A CLASSE FILHA PASSANDO O ARGUMENTO OBRIGATÓRIO DO CONSTRUTOR
+	BotaoCustomizado meuBotaoSalvar = BotaoCustomizado('Salvar alterações');
+	
+	// CHAMAANDO O MÉTODO SUBSCRITO. O DART VAI EXECUTAR A VERSÃO ESPECIALIZADA!
+	meuBotaoSalvar.renderizar();
+	
+}
