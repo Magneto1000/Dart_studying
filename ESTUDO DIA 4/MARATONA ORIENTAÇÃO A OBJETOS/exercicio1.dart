@@ -5,3 +5,12 @@ arrasta o dedo para cima, o aplicativo pega os dados do banco e joga nessa fôrm
 um post real (objeto) na tela. 
 
 */
+
+// 1. O MOLDE (A Classe Pai de todas as telas do Flutter)
+Class ComponenteVisual {
+
+
+
+
+  
+}
