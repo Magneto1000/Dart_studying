@@ -8,7 +8,7 @@ class Lampada {
 	
 	void alternar() {
 		ligada = !ligada; // Inverte o estado (se true vira false, se false vira true)
-		print(ligada ? 'LÂMPADA ACESSA' : 'lÂAMPADA APAGADQA');
+		print(ligada ? 'LÂMPADA ACESSA' : 'LÂAMPADA APAGADQA');
 	}
 }
 
