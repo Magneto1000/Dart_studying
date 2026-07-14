@@ -61,6 +61,14 @@ dentro da variável j1 (que espera o jogador);
 ** QUANOD SE USA DOIS PONTOS (..) O DART IGNORA O RESULTADO DA LINHA E RETORNA O PŔOPRIO
 OBJETO ORIGINAL QUE INICIOU A CADEIA.
   
- 
+
+NA PRÁTICA ISSO SIGNÍFICA QUE:
+
+1. Jogador(): O Dart CRIA UMA INSTÂNCIA LIMPA DO jogador NA MEMÓRIA.
+
+2. ..nome = 'Tito': O DART ENTRA DENTRO DESSA INSTÂNCIA, MUDA O ATRIBUTO nome PARA 'Tito',
+EM VEZ DE ENCERRAR A LINHA, ELE DEVOLVE O OBJETO INTEIRO DE VOLTA.
+
+3. Jogador j1 = ..: A VARIÁVEL  j1 RECEBE O OBJETO PERFEITAMENTE MODIFICADO 
 ========================================================================================
 */
