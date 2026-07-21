@@ -1,31 +1,27 @@
 /*
 ================================================================================================
-EXERCÓCIO 39: EXERCÍCIO DE REFORÇO DE ORIENTAÇÃO OBJETOS COM DESTAQUE PARA OS PARÂMETROS NOMEADOS
+EXERCÓCIO 40: EXERCÍCIO DE REFORÇO NOTIFICAÇÕES COM HERÂNÇA @override
 =================================================================================================
 */
 
-class CartaoPerfil {
-	String nome;
-	String cargo;
-	bool estaAtivo;
+class Notificacao {
+  String mensagem;
+  Notificacao(this.mensagem);
 
-	// Os parâmetros entre {} tornam-se NOMEADOS. O 'required' exige o preenchimento.
-	CartaoPerfil({
-		required this.nome,
-		required this.cargo,
-		this.estaAtivo = true, // Valor padrão a ser mostrado.
-	});
-	
-	void exibir() {
-		print('$nome - $cargo | Status ${estaAtivo ? "Ativo" : "Inativo"}');
-	}
+  void enviar() => print('$mensagem');
 }
 
+class NotificacaoPush extends Notificacao {
+  String dispositivoToken;
+
+  NotificacaoPush(String mensagem, this.dispositivoToken) : super(mensagem);
+
+  @override
+  void enviar() {
+    print('[PUSH] Enviando para o dispositivo $dispositivoToken: $mensagem');
+  }
+}
 void main() {
-	// A ordem de escrita não importa porque usamos os nomes dos parâmetros!
-	CartaoPerfil card = CartaoPerfil(
-		cargo: 'Engenheiro de Software',
-		nome: 'Augusto Santos',	
-	);
-	card.exibir();
+  Notificacao push = Notificacao('Sua senha foi alterada: TOKEN 12333_QWWDWE2');
+  push.enviar();
 }
