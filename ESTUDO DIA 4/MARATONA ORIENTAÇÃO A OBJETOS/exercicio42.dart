@@ -17,7 +17,7 @@ class Texto extends Widget {
 	String build() {
 		return 'Renderizando texto: "$conteudo"';
 	}
-}}
+}
 
 
 class Botao extends Widget {
@@ -37,11 +37,11 @@ void main() {
 		Texto('Bem-Vindo ao APP!'),
 		Botao(
 			rotulo: 'Entrar',
-			aoCLicar: () => print('Botão clicado!'),
+			aoClicar: () => print('Botão clicado!'),
 		),
 	];
 
 	for (var widget in interface) {
-		print('widget.build');
+		print(widget.build());
 	} 
 }
